@@ -15,11 +15,13 @@ import { MovieSearchModule } from "./movie-search/movie-search.module";
 
 // Routing Module import
 import { AppRoutingModule } from "./app-routing/app-routing.module";
+import { TextColorDirective } from './text-color.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    TextColorDirective
   ],
   imports: [
     BrowserModule,

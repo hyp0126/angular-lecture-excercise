@@ -1,4 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpSupportService} from "../http-support.service";
+
+interface IBook {
+  bauthor: string;
+  bdate: string;
+  btranslator: string;
+  bpublisher: string;
+  btitle: string;
+  bprice: number;
+  bisbn: string;
+  bimgurl: string;
+}
 
 @Component({
   selector: 'app-detail-box',
@@ -7,7 +19,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailBoxComponent implements OnInit {
 
-  constructor() { }
+  book: IBook;
+
+  constructor(private httpSupportService:HttpSupportService) {
+    this.httpSupportService.updateSelectedBook.subscribe(selectedBook => {
+      this.book = selectedBook;
+    });
+  }
 
   ngOnInit(): void {
   }

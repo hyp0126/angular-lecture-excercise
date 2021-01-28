@@ -1,7 +1,15 @@
 <div class="example-container">
-    <mat-toolbar class="search-toolbar-style">Search Keyword : </mat-toolbar>
+    <mat-toolbar #toolbar class="search-toolbar-style">
+      Search Keyword : {{keyword}}
+      <ng-container *ngIf="_bookCategory != null">
+        ( {{_bookCategory}} )
+      </ng-container>
+    </mat-toolbar>
     <mat-form-field>
-      <input matInput placeholder="Search Keyword">
+      <input matInput #inputKeyword placeholder="Search Keyword"
+             [(ngModel)]="keyword" (ngModelChange)="inputChange()">
     </mat-form-field>
-    <button mat-raised-button color="warn">Search!</button>
+    <button mat-raised-button color="warn"
+            (click)="setKeyword(inputKeyword.value)">Search!</button>
+    <ng-content></ng-content>
   </div>

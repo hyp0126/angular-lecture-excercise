@@ -12,18 +12,49 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { MatCardModule } from '@angular/material/card';
 
+// 양방향 바인딩을 위한 FormsModule import
+import { FormsModule } from '@angular/forms';
+
+// COMPOSITION_BUFFER_MODE import
+import { COMPOSITION_BUFFER_MODE } from '@angular/forms';
+
+import { MatSelectModule } from '@angular/material/select';
+import { HttpClientModule } from "@angular/common/http";
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+
+import { HttpSupportService } from "../http-support.service";
+import { BookPricePipe } from '../book-price.pipe';
 @NgModule({
-  declarations: [BookSearchMainComponent, 
+  declarations: [
+    BookSearchMainComponent, 
     SearchBoxComponent, 
     ListBoxComponent, 
-    DetailBoxComponent],
+    DetailBoxComponent,
+    BookPricePipe
+  ],
   imports: [
     CommonModule,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
     MatToolbarModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule,
+    MatSelectModule,
+    HttpClientModule,
+    MatTableModule,
+    MatPaginatorModule
+  ],
+  providers: [
+    {
+      provide: COMPOSITION_BUFFER_MODE,
+      useValue: false
+    },
+    {
+      provide: HttpSupportService,    // 데이터 타입
+      useClass: HttpSupportService    // 실제 객체를 생성하기 위해 필요한 class명
+    },
   ]
 })
 export class BookSearchModule { }
