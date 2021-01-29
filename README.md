@@ -1,27 +1,23 @@
 # MySearchProject
+Lecture: https://moon9342.github.io/angular-lecture-introduction
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.0.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1-Introduction<br />
+2-Dev Environment<br />
+3-Component<br />
+4-Angular Material<br />
+5-Practice 1<br />
+6-Data Binding<br />
+7-Practice 2<br />
+8-Material Table<br />
+9-@Input<br />
+10-@Output<br />
+11-@ViewChild<br />
+12-Content Projection<br />
+13-Service<br />
+14-Service Mediator Pattern<br />
+15-Service RxJS<br />
+16-Material Table Event<br />
+17-Notes<br />
+18-Directive<br />
+19-Pipe<br />
+20-Component Lifecycle<br />
